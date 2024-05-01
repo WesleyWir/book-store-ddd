@@ -1,0 +1,83 @@
+services:
+  #PHP Container
+  app:
+    image: devilbox/php-fpm:8.2-mods
+    container_name: book-store-app
+    tty: true
+    user: "devilbox:devilbox"
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./.docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    depends_on:
+      - database
+    networks:
+      - app-network
+
+  #Nginx Container
+  webserver:
+    image: nginx:alpine
+    container_name: book-store-webserver
+    tty: true
+    working_dir: /var/www
+    environment:
+      APP_HOST: book-store-app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www
+      - ./.docker/nginx/app.template:/etc/nginx/app.template
+      - ./.docker/nginx/conf.sh:/etc/nginx/conf.sh
+    depends_on:
+      - app
+    entrypoint:
+      - /etc/nginx/conf.sh
+    command: nginx -g 'daemon off;'
+    networks:
+      - app-network
+
+  #MySQL Container
+  database:
+    image: mariadb:10.3-bionic
+    container_name: book-store-database
+    tty: true
+    ports:
+      - "3306:3306"
+    command: --init-file /data/application/init.sql
+    environment:
+      MYSQL_DATABASE: sistema_inovacao_agraria
+      MYSQL_ROOT_PASSWORD: secret
+    working_dir: /media
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./.docker/mysql/sqls:/media
+      - ./.docker/mysql/init.sql:/data/application/init.sql
+    networks:
+      - app-network
+
+  #PhpMyAdmin Container
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: book-store-phpmyadmin
+    environment:
+      PMA_HOST: book-store-database
+      PMA_USER: root
+      PMA_PASSWORD: secret
+      MEMORY_LIMIT: 1024M
+      UPLOAD_LIMIT: 1024M
+    ports:
+      - "8081:80"
+    depends_on:
+      - database
+    networks:
+      - app-network
+
+#Docker Networks
+networks:
+  app-network:
+    driver: bridge
+
+#Volumes
+volumes:
+  dbdata:
+    driver: local
