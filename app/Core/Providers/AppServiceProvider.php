@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Providers;
+namespace App\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Common\Infraestructure\Repositories\BindRepositories;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        (new BindRepositories($this->app))->bind();
     }
 }

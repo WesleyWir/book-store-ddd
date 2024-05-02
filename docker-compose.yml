@@ -45,7 +45,7 @@ services:
       - "3306:3306"
     command: --init-file /data/application/init.sql
     environment:
-      MYSQL_DATABASE: sistema_inovacao_agraria
+      MYSQL_DATABASE: book_store
       MYSQL_ROOT_PASSWORD: secret
     working_dir: /media
     volumes:

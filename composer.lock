@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da9b7a1dc1dd923105198c572cc7df8d",
+    "content-hash": "065c488d8c853c86489ec2d73b2e3b62",
     "packages": [
         {
             "name": "brick/math",
@@ -3125,6 +3125,139 @@
             "time": "2024-04-27T21:32:50+00:00"
         },
         {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.16.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
+                "reference": "ddf678e78d7f8b17e5cdd99c0c3413a4a6592e53",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.16.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-03-20T07:29:11+00:00"
+        },
+        {
+            "name": "spatie/laravel-query-builder",
+            "version": "5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-query-builder.git",
+                "reference": "8d8b527a68d4651b7860d9993a33b8d4774a9d72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-query-builder/zipball/8d8b527a68d4651b7860d9993a33b8d4774a9d72",
+                "reference": "8d8b527a68d4651b7860d9993a33b8d4774a9d72",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^10.0|^11.0",
+                "illuminate/http": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.11"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^7.0|^8.0",
+                "pestphp/pest": "^2.0",
+                "spatie/invade": "^2.0",
+                "spatie/laravel-ray": "^1.28"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\QueryBuilder\\QueryBuilderServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\QueryBuilder\\": "src",
+                    "Spatie\\QueryBuilder\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Vanderbist",
+                    "email": "alex@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily build Eloquent queries from API requests",
+            "homepage": "https://github.com/spatie/laravel-query-builder",
+            "keywords": [
+                "laravel-query-builder",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-query-builder/issues",
+                "source": "https://github.com/spatie/laravel-query-builder"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2024-02-06T20:07:16+00:00"
+        },
+        {
             "name": "symfony/clock",
             "version": "v7.0.7",
             "source": {
@@ -5421,6 +5554,73 @@
                 }
             ],
             "time": "2024-04-18T09:29:19+00:00"
+        },
+        {
+            "name": "thejano/laravel-domain-driven-design",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thejano/laravel-domain-driven-design.git",
+                "reference": "8e5b9a7d35e06775992af84ffd625faae0e4a309"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thejano/laravel-domain-driven-design/zipball/8e5b9a7d35e06775992af84ffd625faae0e4a309",
+                "reference": "8e5b9a7d35e06775992af84ffd625faae0e4a309",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.0|^11.0",
+                "php": "^8.1|^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.6",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TheJano\\LaravelDomainDrivenDesign\\LaravelDomainDrivenDesignServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TheJano\\LaravelDomainDrivenDesign\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dr Pshtiwan",
+                    "email": "drpshtiwan@thejano.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Helps to use domain driven design within laravel",
+            "homepage": "https://github.com/thejano/laravel-domain-driven-design",
+            "keywords": [
+                "Domain Driven Design",
+                "TheJano",
+                "dd",
+                "ddd",
+                "design",
+                "domain",
+                "domain-driven-design",
+                "drivem",
+                "laravel",
+                "laravel ddd",
+                "laravel-domain-driven-design"
+            ],
+            "support": {
+                "issues": "https://github.com/thejano/laravel-domain-driven-design/issues",
+                "source": "https://github.com/thejano/laravel-domain-driven-design/tree/1.1.0"
+            },
+            "time": "2024-03-20T13:26:08+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7775,16 +7975,16 @@
         },
         {
             "name": "spatie/flare-client-php",
-            "version": "1.4.4",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "17082e780752d346c2db12ef5d6bee8e835e399c"
+                "reference": "9aa60f6ded35a774554e7a5256dca12b72693b78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/17082e780752d346c2db12ef5d6bee8e835e399c",
-                "reference": "17082e780752d346c2db12ef5d6bee8e835e399c",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/9aa60f6ded35a774554e7a5256dca12b72693b78",
+                "reference": "9aa60f6ded35a774554e7a5256dca12b72693b78",
                 "shasum": ""
             },
             "require": {
@@ -7832,7 +8032,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.4.4"
+                "source": "https://github.com/spatie/flare-client-php/tree/1.5.0"
             },
             "funding": [
                 {
@@ -7840,7 +8040,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-31T14:18:45+00:00"
+            "time": "2024-05-02T13:18:42+00:00"
         },
         {
             "name": "spatie/ignition",
@@ -7927,16 +8127,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "2.6.2",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "42d986f4ab9d667020264a7481190a4606ebbeb0"
+                "reference": "f52124d50122611e8a40f628cef5c19ff6cc5b57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/42d986f4ab9d667020264a7481190a4606ebbeb0",
-                "reference": "42d986f4ab9d667020264a7481190a4606ebbeb0",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/f52124d50122611e8a40f628cef5c19ff6cc5b57",
+                "reference": "f52124d50122611e8a40f628cef5c19ff6cc5b57",
                 "shasum": ""
             },
             "require": {
@@ -7945,7 +8145,7 @@
                 "ext-mbstring": "*",
                 "illuminate/support": "^10.0|^11.0",
                 "php": "^8.1",
-                "spatie/flare-client-php": "^1.3.5",
+                "spatie/flare-client-php": "^1.5",
                 "spatie/ignition": "^1.14",
                 "symfony/console": "^6.2.3|^7.0",
                 "symfony/var-dumper": "^6.2.3|^7.0"
@@ -8015,7 +8215,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-30T13:56:21+00:00"
+            "time": "2024-05-02T13:42:49+00:00"
         },
         {
             "name": "symfony/yaml",
