@@ -46,19 +46,22 @@ $ php artisan migrate
 ```
 
 ### Routes:
-POST        api/auth/forgot-password
-POST        api/auth/login
-POST        api/auth/logout
-GET         api/auth/me
-POST        api/auth/reset-password
-POST        api/auth/signup
-GET         api/books
-POST        api/books
-GET         api/books/{bookId}
-PUT|PATCH   api/books/{bookId}
-DELETE      api/books/{bookId}
-GET         api/stores
-POST        api/stores
-GET         api/stores/{storeId}
-PUT|PATCH   api/stores/{storeId}
-DELETE      api/stores/{storeId}
+| HTTP Method   | Route                     |
+| ------------- | ------------------------- |
+| POST          | api/auth/forgot-password  |
+| POST          | api/auth/login            |
+| POST          | api/auth/logout           |
+| GET           | api/auth/me               |
+| POST          | api/auth/reset-password   |
+| POST          | api/auth/signup           |
+| GET           | api/books                 |
+| POST          | api/books                 |
+| GET           | api/books/{bookId}        |
+| PUT/PATCH     | api/books/{bookId}        |
+| DELETE        | api/books/{bookId}        |
+| GET           | api/stores                |
+| POST          | api/stores                |
+| GET           | api/stores/{storeId}      |
+| PUT/PATCH     | api/stores/{storeId}      |
+| DELETE        | api/stores/{storeId}      |
+
