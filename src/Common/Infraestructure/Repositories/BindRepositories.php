@@ -8,6 +8,8 @@ class BindRepositories
 {
     private $repositoriesToBind = [
         'Users' => 'User',
+        'Books' => 'Book',
+        'Stores' => 'Store',
     ];
 
     protected Application $app;
